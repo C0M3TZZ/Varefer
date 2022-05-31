@@ -1,0 +1,30 @@
+{
+  "name": "varefer-bot",
+  "version": "1.0.0",
+  "description": "This bot make for Pre Programing 65",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C0M3TZZ/Varefer.git"
+  },
+  "keywords": [
+    "discord-js",
+    "Pre-Programing-65"
+  ],
+  "author": "C0M3TZZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/C0M3TZZ/Varefer/issues"
+  },
+  "homepage": "https://github.com/C0M3TZZ/Varefer#readme",
+  "dependencies": {
+    "discord.js": "^13.7.0",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
+}
