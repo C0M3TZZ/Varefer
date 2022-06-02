@@ -1,0 +1,23 @@
+name: Deploy Varefer_Bot1
+on: [push]
+jobs:
+  
+  build:
+    name: Deploy Varefer_Bot1
+    runs-on: self-hosted
+    steps:
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        host: ${{ secrets.HOSTIP1_LAZY2USE }},${{ secrets.HOSTIP2_LAZY2USE }}
+        username: ${{ secrets.HOST_USERNAME }}
+        key: ${{ secrets.RUNNER_LAZY2USEKEY }}
+        port: ${{ secrets.HOST_PORT }}
+        script: |
+          cd Varefer
+          git pull origin main
+          sudo docker images -t varefer .
+          sudo docker-compose up -d
+          sudo docker ps -a
+          sudo docker logs bot_1
+          
