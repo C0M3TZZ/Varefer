@@ -1,5 +1,4 @@
 const config = require('../config.json');
-const p19Plus = new RegExp('^!P\'');
 const freshy = new RegExp('-');
 
 module.exports = {
@@ -9,13 +8,10 @@ module.exports = {
         if (oldMember.user.bot) {
             return;
         }
-        if (freshy.test(newMember.nickname)) {
+        if (freshy.test(newMember.displayName)) {
             newMember.roles.add(config.verify.roleId);
             return;
         }
         newMember.roles.remove(config.verify.roleId);
-        if (p19Plus.test(newMember.nickname)) {
-            return;
-        }
     },
 };
