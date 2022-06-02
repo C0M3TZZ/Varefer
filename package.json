@@ -1,6 +1,6 @@
 {
   "name": "varefer-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This bot make for Pre Programing 65",
   "main": "bot.js",
   "scripts": {
